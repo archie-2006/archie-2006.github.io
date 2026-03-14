@@ -26,7 +26,7 @@ Following are the key areas to define (but not limited to):
 
 ### A. Database Schema & State Management (SQLAlchemy)
 A new SQLAlchemy model for thread opt-ins.
-* **New Model (`ThreadSubscription`):** A list subscribe is mapped to a particular thread usinf this model. Fields: `id` (Primary Key), `mailing_list_id` (Foreign Key), `address_id` (Foreign Key mapping to the subscriber's verified address), and `thread_id` (The hashed `Message-ID` of the root email).
+* **New Model (`ThreadSubscription`):** A list subscribe is mapped to a particular thread using this model. Fields: `id` (Primary Key), `mailing_list_id` (Foreign Key), `address_id` (Foreign Key mapping to the subscriber's verified address), and `thread_id` (The hashed `Message-ID` of the root email).
 * **Manager Interface:** `IThreadManager` interface will handle all the CRUD operations, such as `subscribe_to_thread()` and `unsubscribe_from_thread()`.
 
 ### B. Recipient Filtering (Pipeline Handlers)
@@ -37,7 +37,7 @@ Currently, Mailman adds `msgdata['recipients']` with all list members. Creating 
 ### C. Email Command Interface
 I will implement new email commands (e.g., `-follow` and `-unfollow`).
 * Using the command parsing logic in `mailman.commands`, these will extract the user's `Address` and the target `Message-ID`.
-* The command runner will then pass these arguments to the `IThreadManager` (see mangaer interface in sqlalchemy) to update the DB state.
+* The command runner will then pass these arguments to the `IThreadManager` (see manager interface in sqlalchemy) to update the DB state.
 
 ### D. REST API Endpoints
 To allow HyperKitty (web frontend) to interact with this feature. This ensures people can subscribe to these threads via the web interface in addition to email cmds.
