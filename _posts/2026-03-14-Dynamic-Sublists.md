@@ -8,7 +8,7 @@
 * **Email:** 
 * **Timezone:** IST (UTC +5:30) -->
 
-## Project Synopsis
+## Some project breadcrumbs
 
 Having familiarised with mailman-developers mailing list, it is obvious that mailings lists are powerful tools for communication when you don't want to reach out to only one person but get feedback etc. from multiple people at once/ or whoever decides to help. 
 
@@ -45,7 +45,7 @@ To allow HyperKitty (web frontend) to interact with this feature. This ensures p
 * `DELETE /lists/<list_id>/threads/<thread_id>/subscribers/<address>`
 
 ## Project Timeline (Currently working on it)
-*(To be updated based on mentor feedback regarding 175 vs 350-hour scope).*
+*Still working on this currently*
 
 ## Prior Open Source Contributions
 
