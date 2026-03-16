@@ -1,14 +1,16 @@
 # Archie Singh
-
+# PS. Keeping this private currently as I will post my Proposal directly on the GSoC Website 
 <!-- ## 1. Applicant Information
 * **Name:** Archie Singh
 * **University:** Indian Institute of Technology (IIT) Jodhpur
 * **Major:** Computer Science and Engineering (Expected Graduation: 2028)
 * **GitHub:** 
 * **Email:** 
-* **Timezone:** IST (UTC +5:30) -->
+* **Timezone:** IST (UTC +5:30)
 
-## Some project breadcrumbs
+## Some project breadcrumbs (WIP)
+
+## Link to my proposal document for comments (WIP):  
 
 Having familiarised with mailman-developers mailing list, it is obvious that mailings lists are powerful tools for communication when you don't want to reach out to only one person but get feedback etc. from multiple people at once/ or whoever decides to help. 
 
@@ -45,11 +47,12 @@ To allow HyperKitty (web frontend) to interact with this feature. This ensures p
 * `DELETE /lists/<list_id>/threads/<thread_id>/subscribers/<address>`
 
 ## Project Timeline (Currently working on it)
-*Still working on this currently*
+*Still working on this currently* -->
 
 ## Prior Open Source Contributions
 
 I have previously worked on the OTW (Organization for Transformative Works) archive to fix bugs and suggest some changes and features for the Archive of Our Own. I have also contributed to other open-source projects, which you can find on my [GitHub profile](https://github.com/archie-2006).
 
 **Mailman Contributions:**
+* **Issue #1226 (Merge Request Submitted):** Implemented a `send_owner_emails_to_moderators` toggle for the `-owner` alias by changing (adding a column in the schema that takes care of the owners and mods) `IMailingList` SQLAlchemy schema, the `owner-recipients pipeline` handler to route the emails specfically (`mlist.owners` and `mlist.administrators`), and applying list style defaults in styles/base.py. 
 * **Issue #1105 (Merge Request Submitted):** Fixed the `leave` email command to properly process the `address=` argument. This required navigating the scopes between `User` and `Address` objects, refining Python matching logic in `eml_membership.py`, and writing precise `.rst` doctests. *(Note: Encountered and diagnosed the known `#1258` flaky test bug involving `_io.BufferedWriter` signal handlers during the CI pipeline in this issue itself).*
